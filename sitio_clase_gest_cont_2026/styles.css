@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
+
+* { box-sizing: border-box; margin: 0; }
+
+body { font-family: "Google Sans"; }
+
+.container { 
+    width: 100%; 
+    max-width: 1280px; 
+    margin: auto;
+    padding: 0 16px;
+}
+
+main { display: grid; gap: 36px; }
+
+h1 { font-size: 54px; line-height: 1.08; }
+
+h2 { text-align: center; font-size: 38px; margin-top: 52px; }
+
+
+/* *****  S E C C I O N   H E A D E R  ***** */
+
+header {
+    background: #e1e1e1;
+    position: sticky;
+    top:0;
+    width: 100%;
+    margin-bottom: 36px;
+    z-index: 4;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    align-items: center;
+    padding: 20px;
+}
+
+header li { display: inline; }
+
+header li a { 
+    text-decoration: none; 
+    color: #2d2d2d;
+    padding-left: 16px;
+}
+
+header li a:hover { opacity: .6; }
+
+.burger-btn { display: none; }
+
+
+/* *****  S E C C I O N   H E R O  ***** */
+
+#hero { display: grid; grid-template-columns: 1fr 1fr; }
+
+#l-panel {
+    min-height: 420px;
+    display: grid;
+    align-content: center;
+    gap: 16px;
+}
+
+#l-panel p { color: #5a5a5a; }
+
+#r-panel { display: grid; place-items: center; }
+
+#r-panel img { width: 360px; border-radius: 50%; }
+
+
+/*   *****  S E C C I O N   S K I L L S  *****   */
+
+#skills { display: grid; gap: 20px; text-align: center; margin-top: 38px; font-size: 14px;}
+
+.skill { display: grid; gap: 4px; text-align: left; }
+
+.skill div { position: relative; background: #c6c6c6; width: 100%; height: 18px; border-radius: 50px; }
+
+.skill div div {
+    
+    position: absolute; 
+    background: #4a3580; 
+    border-radius: 50px; 
+    color: #fff; 
+    left: 0; top: 0; 
+    font-size: 10px; 
+    font-weight: 600;
+    padding: 0 8px; 
+    display: grid; 
+    align-items: center;
+}
+
+
+/* ***** S E C C I O N   T R A B A J O S ***** */
+
+#trabajos { display: grid; grid-template-columns: 1fr 1fr; gap: 20px;}
+.trabajo { 
+    background: #e1e1e1; 
+    min-height: 200px;
+    border-radius: 6px; 
+    width: auto; 
+    display: grid; 
+    place-items: center; 
+}
+
+
+/* *****  S E C C I O N   F O O T E R  ***** */
+
+footer { height: 80px; background: #e1e1e1; margin-top: 52px; display: grid; place-items: center; }
+
+
+/* *****  B O T O N E S  ***** */
+
+.btn {
+    background: #4a3580;
+    color: #fff;
+    text-decoration: none;
+    width: fit-content;
+    height: 40px;
+    display: grid;
+    place-items: center;
+    border-radius: 50px;
+    padding: 0 20px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+}
+.btn:hover {
+    filter: brightness(1.4);
+}
+
+/* *****  M E D I A  Q U E R I E S (estilos para vista móvil) ***** */
+
+@media (max-width: 720px) {
+
+    .container { width: 100%; }
+
+    #hero { grid-template-columns: 1fr; }
+
+    #trabajos { grid-template-columns: 1fr; }
+
+    /* Menú lateral */
+    .burger-btn { border: none; background: none; display: grid; z-index: 9; cursor: pointer; }
+
+    header ul {
+        position: fixed;
+        top: 0;
+        right: -260px;
+        height: 100%; width: 260px;
+        background: #c8badb;
+        transition: .3s;
+        z-index: 6;
+        display: flex; flex-direction: column;
+        padding: 94px 8px; gap: 30px;
+
+    }
+    .open { right: 0; }
+
+    .shadow-fill {
+        z-index: 5;
+        position: fixed;
+        width: 100%; height: 100%;
+        background: rgba(0, 0, 0, 0);
+        pointer-events: none;  
+    }
+
+    .shadow-fill-active { background: rgba(0, 0, 0, .4); pointer-events: all; }
+
+}
