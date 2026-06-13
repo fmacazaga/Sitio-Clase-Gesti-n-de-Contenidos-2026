@@ -15,7 +15,7 @@ body { font-family: "Google Sans"; }
 
 main { display: grid; gap: 36px; }
 
-h1 { font-size: 54px; line-height: 1.08; font-weight: 900; }
+h1 { font-size: 64px; line-height: 1.08; font-weight: 900; }
 
 h2 { text-align: center; font-size: 38px; margin-top: 52px; }
 
@@ -39,15 +39,16 @@ nav {
     padding: 20px;
 }
 
-header li { display: inline; }
+header li { display: inline; padding-left: 16px; }
 
-header li a { 
-    text-decoration: none; 
-    color: #2d2d2d;
-    padding-left: 16px;
+a { 
+    text-decoration: none; color: #1c1c1c; 
+    font-size: 14px; font-weight: 500;
 }
 
 header li a:hover { opacity: .6; }
+
+i { margin-right: 16px; font-size: 16px; color: #404040; }
 
 .burger-btn { display: none; }
 
@@ -60,10 +61,10 @@ header li a:hover { opacity: .6; }
     min-height: 420px;
     display: grid;
     align-content: center;
-    gap: 16px;
+    gap: 20px;
 }
 
-#l-panel p { color: #5a5a5a; }
+#l-panel p, #l-panel h2 { color: #5a5a5a; text-align: left }
 
 #r-panel { display: grid; place-items: center; }
 
@@ -81,7 +82,7 @@ header li a:hover { opacity: .6; }
 .skill div div {
     
     position: absolute; 
-    background: #4a3580; 
+    background: #584a7c; 
     border-radius: 50px; 
     color: #fff; 
     left: 0; top: 0; 
@@ -108,13 +109,15 @@ header li a:hover { opacity: .6; }
 
 /* *****  S E C C I O N   F O O T E R  ***** */
 
-footer { height: 80px; background: #e1e1e1; margin-top: 52px; display: grid; place-items: center; }
+footer { background: #e1e1e1; margin-top: 52px; }
+
+footer .container { height: 80px; display: flex; justify-content: space-between; align-items: center;}
 
 
 /* *****  B O T O N E S  ***** */
 
 .btn {
-    background: #4a3580;
+    background: #584a7c;
     color: #fff;
     text-decoration: none;
     width: fit-content;
@@ -127,9 +130,8 @@ footer { height: 80px; background: #e1e1e1; margin-top: 52px; display: grid; pla
     font-size: 14px;
     font-weight: 500;
 }
-.btn:hover {
-    filter: brightness(1.4);
-}
+.btn:hover { filter: brightness(1.4); }
+
 
 /* *****  M E D I A  Q U E R I E S (estilos para vista móvil) ***** */
 
