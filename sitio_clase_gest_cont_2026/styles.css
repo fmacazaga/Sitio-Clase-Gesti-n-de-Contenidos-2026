@@ -1,14 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
 
-* { box-sizing: border-box; margin: 0; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
 html { scroll-behavior: smooth; }
 
-body { font-family: "Google Sans"; }
+body { font-family: "Google Sans"; background: #f3f3f3;  }
 
 .container { 
-    width: 100%; 
-    max-width: 1280px; 
+    width: min(100%, 1280px);
     margin: auto;
     padding: 0 16px;
 }
@@ -23,12 +22,13 @@ h2 { text-align: center; font-size: 38px; margin-top: 52px; }
 /* *****  S E C C I O N   H E A D E R  ***** */
 
 header {
-    background: #e1e1e1;
+    background: #fff;
     position: sticky;
     top:0;
     width: 100%;
     margin-bottom: 36px;
     z-index: 4;
+    border-bottom: 1px solid #c5c5c5;
 }
 
 nav {
@@ -48,7 +48,7 @@ a {
 
 header li a:hover { opacity: .6; }
 
-i { margin-right: 16px; font-size: 16px; color: #404040; }
+i { margin-left: 16px; font-size: 16px; color: #404040; }
 
 .burger-btn { display: none; }
 
@@ -61,7 +61,7 @@ i { margin-right: 16px; font-size: 16px; color: #404040; }
     min-height: 420px;
     display: grid;
     align-content: center;
-    gap: 20px;
+    gap: 24px;
 }
 
 #l-panel p, #l-panel h2 { color: #5a5a5a; text-align: left }
@@ -73,9 +73,9 @@ i { margin-right: 16px; font-size: 16px; color: #404040; }
 
 /*   *****  S E C C I O N   S K I L L S  *****   */
 
-#skills { display: grid; gap: 20px; text-align: center; margin-top: 38px; font-size: 14px;}
+#skills { display: grid; gap: 42px; text-align: center; margin-top: 38px; }
 
-.skill { display: grid; gap: 4px; text-align: left; }
+.skill { display: grid; gap: 6px; text-align: left; color: #606060; }
 
 .skill div { position: relative; background: #c6c6c6; width: 100%; height: 18px; border-radius: 50px; }
 
@@ -98,7 +98,7 @@ i { margin-right: 16px; font-size: 16px; color: #404040; }
 
 #trabajos { display: grid; grid-template-columns: 1fr 1fr; gap: 20px;}
 .trabajo { 
-    background: #e1e1e1; 
+    background: #fff; 
     min-height: 200px;
     border-radius: 6px; 
     width: auto; 
@@ -156,8 +156,8 @@ footer .container { height: 80px; display: flex; justify-content: space-between;
         z-index: 6;
         display: flex; flex-direction: column;
         padding: 94px 8px; gap: 30px;
-
     }
+
     .open { right: 0; }
 
     .shadow-fill {
