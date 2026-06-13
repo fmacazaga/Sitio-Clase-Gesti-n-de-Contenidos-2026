@@ -4,7 +4,7 @@
 
 html { scroll-behavior: smooth; }
 
-body { font-family: "Google Sans"; background: #f3f3f3;  }
+body { font-family: "Google Sans"; background: #f5f5f5;  }
 
 .container { 
     width: min(100%, 1280px);
@@ -30,6 +30,8 @@ header {
     z-index: 4;
     border-bottom: 1px solid #c5c5c5;
 }
+
+#logo { font-size: 20px; font-weight: 600; }
 
 nav {
     display: flex;
