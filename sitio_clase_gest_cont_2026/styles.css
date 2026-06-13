@@ -2,6 +2,8 @@
 
 * { box-sizing: border-box; margin: 0; }
 
+html { scroll-behavior: smooth; }
+
 body { font-family: "Google Sans"; }
 
 .container { 
@@ -13,7 +15,7 @@ body { font-family: "Google Sans"; }
 
 main { display: grid; gap: 36px; }
 
-h1 { font-size: 54px; line-height: 1.08; }
+h1 { font-size: 54px; line-height: 1.08; font-weight: 900; }
 
 h2 { text-align: center; font-size: 38px; margin-top: 52px; }
 
