@@ -1,10 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
 
+:root { 
+    --color-bg-surface: #ebebeb;
+    --color-bg-panel: #fff;
+    --color-cta-primary: #8a62b8; 
+}
+
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 html { scroll-behavior: smooth; }
 
-body { font-family: "Google Sans"; background: #ebebeb;  }
+body { font-family: "Google Sans"; background: var(--color-bg-surface);  }
 
 .container { 
     width: min(100%, 1280px);
@@ -12,26 +18,26 @@ body { font-family: "Google Sans"; background: #ebebeb;  }
     padding: 0 16px;
 }
 
-main { display: grid; gap: 36px; }
+main { display: grid; gap: 128px; } section { display: grid; gap: 28px;}
 
-h1 { font-size: 64px; line-height: 1.08; font-weight:bolder; }
+h1 { font-size: 68px; line-height: 1.08; font-weight: bolder; }
 
-h2 { font-size: 38px; text-align: center; margin-top: 52px; }
+h2 { font-size: 38px; text-align: center; }
 
 
 /* *****  S E C C I O N   H E A D E R  ***** */
 
 header {
-    background: #fff;
+    background: var(--color-bg-panel);
     position: sticky;
     top:0;
     width: 100%;
-    margin-bottom: 36px;
     z-index: 4;
     border-bottom: 1px solid #c5c5c5;
+    margin-bottom: 36px;
 }
 
-#logo { font-size: 20px; font-weight: 600; }
+#logo { font-size: 22px; font-weight: 600; }
 
 nav {
     display: flex;
@@ -43,14 +49,11 @@ nav {
 
 header li { display: inline; padding-left: 16px; }
 
-a { 
-    text-decoration: none; color: #1c1c1c; 
-    font-size: 14px; font-weight: 500;
-}
+a { text-decoration: none; color: #343434; font-size: 14px; font-weight: 500; }
 
 header li a:hover { opacity: .6; }
 
-i { margin-left: 16px; font-size: 18px; color: #777777; }
+i { margin-left: 16px; font-size: 18px; color: #444444; }
 
 .burger-btn { display: none; }
 
@@ -59,8 +62,8 @@ i { margin-left: 16px; font-size: 18px; color: #777777; }
 
 #hero { display: grid; grid-template-columns: 1fr 1fr; }
 
-#l-panel {
-    min-height: 420px;
+#l-panel, #r-panel {
+    min-height: 720px;
     display: grid;
     align-content: center;
     gap: 24px;
@@ -70,21 +73,21 @@ i { margin-left: 16px; font-size: 18px; color: #777777; }
 
 #r-panel { display: grid; place-items: center; }
 
-#r-panel img { width: 400px; border-radius: 50%; }
+#r-panel img { width: 480px; border-radius: 50%; }
 
 
 /*   *****  S E C C I O N   habilidades  *****   */
 
-#habilidades { display: grid; gap: 42px; text-align: center; margin-top: 38px; }
+#habilidades { display: grid; gap: 28px; text-align: center; }
 
 .skill { display: grid; gap: 6px; text-align: left; color: #606060; }
 
-.skill div { position: relative; background: #c6c6c6; width: 100%; height: 18px; border-radius: 50px; }
+.skill div { position: relative; background: var(--color-bg-panel); width: 100%; height: 18px; border-radius: 50px; }
 
 .skill div div {
     
     position: absolute; 
-    background: #584a7c; 
+    background: var(--color-cta-primary); 
     border-radius: 50px; 
     color: #fff; 
     left: 0; top: 0; 
@@ -100,22 +103,21 @@ i { margin-left: 16px; font-size: 18px; color: #777777; }
 
 #trabajos { display: grid; grid-template-columns: 1fr 1fr; gap: 20px;}
 .trabajo { 
-    background: #fff; 
+    background: var(--color-bg-panel); 
     min-height: 200px;
     border-radius: 6px; 
     width: auto; 
     display: grid; 
-    place-items: center; 
+    place-items: center;
+    color: #343434; 
 }
 
 /* *****  S E C C I O N   C O N T A C T O  ***** */
 
-    #contacto { display: grid; gap: 28px }
-  
     #contacto .contact { 
         display: grid; gap: 20px;
         grid-template: repeat(2, auto)/repeat(8, 1fr); 
-        background:#fff;
+        background:var(--color-bg-panel);
         width: 100%;
         padding: 20px 16px;
         border-radius: 6px; }
@@ -144,7 +146,7 @@ i { margin-left: 16px; font-size: 18px; color: #777777; }
 
 /* *****  S E C C I O N   F O O T E R  ***** */
 
-footer { background: #e1e1e1; margin-top: 52px; }
+footer { background: var(--color-bg-panel); margin-top: 52px; }
 
 footer .container { height: 80px; display: flex; justify-content: space-between; align-items: center;}
 
@@ -152,15 +154,15 @@ footer .container { height: 80px; display: flex; justify-content: space-between;
 /* *****  B O T O N E S  ***** */
 
 .btn {
-    background: #584a7c;
+    background: var(--color-cta-primary);
     color: #fff;
     text-decoration: none;
     width: fit-content;
-    height: 40px;
+    height: 48px;
     display: grid;
     place-items: center;
     border-radius: 50px;
-    padding: 0 20px;
+    padding: 0 24px;
     cursor: pointer;
     font-size: 14px;
     font-weight: 500;
@@ -169,15 +171,29 @@ footer .container { height: 80px; display: flex; justify-content: space-between;
 .btn:hover { filter: brightness(1.4); }
 
 
-/* *****  M E D I A  Q U E R I E S (estilos para vista móvil) ***** */
+/* *****  M E D I A    Q U E R I E S (estilos para vista móvil) ***** */
 
-@media (max-width: 720px) {
+@media (max-width: 740px) {
+
+    nav { height: 48px; }
+
+    h1 { font-size: 54px; }
+
+    h2 { font-size:34px; }
 
     .container { width: 100%; }
 
+    main { gap: 64px ; }
+
     #hero { grid-template-columns: 1fr; }
 
+    #l-panel, #r-panel { gap: 20px; min-height: 430px; }
+
+    #r-panel img { width: 330px; }
+
     #trabajos { grid-template-columns: 1fr; }
+
+    .btn { width: 100%; }
 
     /* Menú lateral */
     .burger-btn { border: none; background: none; display: grid; z-index: 9; cursor: pointer; }
@@ -208,11 +224,11 @@ footer .container { height: 80px; display: flex; justify-content: space-between;
 
     #contacto { padding: 0 }
   
-      #contacto .name { grid-column: 1/span 8 }
+    #contacto .name { grid-column: 1/span 8; }
   
-      #contacto .email { grid-column: 1/span 8 }
+    #contacto .email { grid-column: 1/span 8; }
   
-      #contacto #btn { grid-column: 1/span 8; width: 100%; }
+    #contacto #btn { grid-column: 1/span 8; width: 100%; }
 
 }
 
